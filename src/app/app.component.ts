@@ -11,9 +11,8 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     await this.platform.ready();
-    alert('Platform is ready');
     this.platform.resume.subscribe(() => {
-      alert('We have resumed the app.');
+      console.log('We have resumed the app.');
     });
   }
 }
